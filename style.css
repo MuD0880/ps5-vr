@@ -1,7 +1,7 @@
 /*BEGIN PS4 Controller Styling*/
 .controller.ds4 {
-    background: url(ps4-assets/base.svg);
-    height: 598px;
+    background: url(https://raw.githubusercontent.com/MuD0880/ps5-vr/refs/heads/main/base.svg);
+    height: 542px;
     width: 806px;
     /*    margin-left: -403px;
         margin-top: -280px;*/
