@@ -7,8 +7,9 @@
         margin-top: -280px;*/
 }
 
+/* ps4-assets/disconnected.svg */
 .ds4.disconnected {
-    background: url(ps4-assets/disconnected.svg);
+    background: url(https://raw.githubusercontent.com/MuD0880/ps5-vr/refs/heads/main/base.svg);
 }
 
 .ds4.disconnected div {
