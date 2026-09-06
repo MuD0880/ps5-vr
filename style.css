@@ -1,5 +1,3 @@
-/*BEGIN DualSense Controller Styling*/
-
 .controller.custom{
     /* The background image is basically the base for the controller's skin. The 
     PS3 controller's skin can be found at http://mrmcpowned.com/gamepad/ps3-assets/base.png
@@ -14,269 +12,278 @@
 .custom.disconnected { /* This class shows an image when the controller is disconnected */
     background: url(ps3-assets/base-disconnect.png);
 }
-.ps5.disconnected div {
+/* This hides the controller's button when disconnected so only the background image remains */ 
+.custom.disconnected div {
     display: none;
 }
-
-.ps5 .triggers {
-    width: 588px;
-    height: 90px;
+.custom .triggers{ /* The triggers are housed inside a div, so this sizes the div properly and positions it */
+    width: 586px;
+    height: 65px;
     position: absolute;
-    left: 109px;
+    left: 99px;
 }
-
-.ps5 .trigger {
-    width: 99px;
-    height: 100%;
-    background: url(ps4-assets/triggers.svg);
+.custom .trigger{/* These are the actual triggers themselves */
+    width:86px;
+    height:65px;
+    background: url(ps3-assets/triggers.png);
     opacity: 0;
 }
-
-.ps5 .trigger.left {
+/* The left and right classes below are used to position the triggers
+within the div they're contained in. Since their positions is realtive
+to the size of the parent element, we simply resize the parent element 
+above to achieve the desired position. */
+.custom .trigger.left{ 
     float: left;
 }
-
-.ps5 .trigger.right {
+.custom .trigger.right{
     float: right;
-    background-position-x: 99px;
 }
 
-.ps5 .bumper {
-    width: 99px;
-    height: 23px;
-    background: url(ps4-assets/bumper.svg) no-repeat;
+/* The bumpers follow the same methodology as the triggers in terms of
+placement */
+.custom .bumper{
+    width: 89px;
+    height: 28px;
+    background: url(ps3-assets/bumpers.png);
     opacity: 0;
 }
-
-.ps5 .bumpers {
+.custom .bumpers{
     position: absolute;
-    width: 588px;
-    height: 23px;
-    left: 109px;
-    top: 94px;
+    width: 586px;
+    height: 28px;
+    left: 99px;
+    top: 72px;
 }
-
-.ps5 .bumper.pressed {
+.custom .bumper.pressed{ /* The '.pressed' class is used for most buttons to signify they've been pressed */
     opacity: 1;
 }
-
-.ps5 .bumper.left {
-    /* -webkit-transform: rotateY(180deg); */
-    /* transform: rotateY(180deg); */
-    float: left;
-}
-
-.ps5 .bumper.right {
-    float: right;
+.custom .bumper.left{
+  /* Call me lazy or smart, but why should I make 2 bumpers when they're symmetrical
+  and I can just rotate them in the browser? Also, note that you most likely won't need
+  to use a browser speficic prefix unless it's something that is indeed browser specific.
+  NOTE: CLR Browser is basically chrome, so you use '-webkit-' as the browser prefix. */
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
-}
-
-.ps5 .touchpad {
-    width: 262px;
-    height: 151px;
-    position: absolute;
-    left: 272px;
-    top: 122px;
-}
-
-.ps5 .touchpad.pressed {
-    background: url(ps4-assets/touchpad.svg) no-repeat center;
-}
-
-.ps5 .meta {
-    width: 42px;
-    height: 42px;
-    position: absolute;
-    left: 382px;
-    bottom: 216px;
-}
-
-.ps5 .meta.pressed {
-    background: url(ps4-assets/meta.svg) no-repeat center;
-}
-
-/*Not needed, but I like keeping them here for posterity*/
-/*.ps5 .quadrant{
-position: absolute;
-background: url(ps4-assets/player-n.svg);
-height: 17px;
-width: 111px;
-top: 140px;
-left: 240px;
-}
-.ps5 .p0{
-background-position: 0 -6px;
-}
-.ps5 .p1{
-background-position: 0 -28px;
-}
-.ps5 .p2{
-background-position: 0 -49px;
-}
-.ps5 .p3{
-background-position: 0 -70px;
-}*/
-.ps5 .arrows {
-    position: absolute;
-    width: 352px;
-    height: 46px;
-    top: 142px;
-    left: 227px;
-}
-
-.ps5 .back, .ps5 .start {
-    background: url(ps4-assets/start.svg);
-    width: 28px;
-    height: 46px;
-    opacity: 0;
-}
-
-.ps5 .back.pressed, .ps5 .start.pressed {
-    /* background-position-y: -21px; */
-    /* margin-top: 2px; */
-    opacity: 1;
-}
-
-.ps5 .back {
     float: left;
-    /* width: 28px; */
 }
-
-.ps5 .start {
+.custom .bumper.right{
     float: right;
-    /* width: 28px; */
-    background-position: 28px 0;
 }
-
-.ps5 .abxy {
+/* This bit of code is for the player indicator, which is represented in
+quandrants on the xbox controller. That's note what it's called on the
+PS3 controller but it'd be pointless for me to change the HTML for 
+something as pedantic as a name. */
+.custom .quadrant{
     position: absolute;
-    width: 170px;
-    height: 171px;
-    top: 159px;
-    left: 567px;
+    background: url(ps3-assets/player-n.png);
+    height: 17px;
+    width: 111px;
+    top: 140px;
+    left: 240px;
 }
-
-.ps5 .button {
+/* Since the player indicator is just a CSS sprite, we change the 
+position of the background to match the player number.
+NOTE: Player orderin starts at 0, so p0 = Player 1 */
+.custom .p0{
+    background-position: 0 -6px;
+}
+.custom .p1{
+    background-position: 0 -28px;
+}
+.custom .p2{
+    background-position: 0 -49px;
+}
+.custom .p3{
+    background-position: 0 -70px;
+}
+/* This is to size and position the containing div for the 
+start and select buttons. */
+.custom .arrows{
     position: absolute;
-    width: 55px;
-    height: 55px;
-    background: url(ps4-assets/face.svg);
+    width: 205px;
+    height: 19px;
+    top: 250px;
+    left: 291px;
 }
-
-.ps5 .button.pressed {
-    background-position-y: 55px;
-    /* margin-top: 5px; */
+/* Setting the size and CSS sprite for the start adn select buttons */
+.custom .back, .custom .start{
+    background: url(ps3-assets/menus.png);
+    width: 34px;
+    height: 19px;
 }
-
-.ps5 .a {
-    background-position: 0 0;
-    bottom: 0;
-    left: 58px;
+.custom .back.pressed, .custom .start.pressed{
+    background-position-y: -21px;
+    margin-top: 2px;
 }
-
-.ps5 .b {
-    background-position: -57px 0;
-    top: 58px;
+.custom .back{
+    float: left;
+    width: 38px;
+}
+.custom .start{
+    float: right;
+    width: 36px;
+    background-position: 37px 0;
+}
+/* Positioning and size of the container for the face buttons */
+.custom .abxy{
+    position: absolute;
+    width: 204px;
+    height: 205px;
+    top: 156px;
+    left: 538px;
+}
+/* base class used to simplify the sprite mapping */
+.custom .button{
+    position: absolute;
+    width:62px;
+    height:62px;
+    background: url(ps3-assets/face-buttons.png);
+}
+.custom .button.pressed{
+    background-position-y: -64px;
+    margin-top: 5px;
+}
+.custom .a{
+    background-position: 62px 0;
+    top: 142px;
+    left: 71px;
+}
+.custom .b{
+    background-position: 125px 0;
+    top: 71px;
     right: 0px;
 }
-
-.ps5 .x {
-    background-position: -113px 0;
-    top: 58px;
+.custom .x{
+    background-position: 0 0;
+    top: 71px;
 }
-
-.ps5 .y {
-    background-position: 55px 0;
-    left: 58px;
+.custom .y{
+    background-position: -63px 0;
+    left: 71px;
 }
-
-.ps5 .sticks {
+/* Analog sticks follow the same principles as the triggers in terms of positioning
+Note that the rotation of the sticks in hard coded with javascript, so it applies 
+the CSS inline. */
+.custom .sticks{
     position: absolute;
-    width: 361px;
+    width: 364px;
     height: 105px;
-    top: 308px;
-    left: 228px;
+    top: 328px;
+    left: 210px;
 }
-
-.ps5 .stick {
+.custom .stick{
     position: absolute;
-    background: url(ps4-assets/sticks.svg);
-    height: 94px;
-    width: 94px;
+    background: url(ps3-assets/thumbs.png);
+    height:105px;
+    width: 105px;
 }
-
-.ps5 .stick.pressed.left {
-    background-position-x: -96px;
+.custom .stick.pressed.left{
+    background-position-x: -106px;
 }
-
-.ps5 .stick.pressed.right {
-    background-position-x: -192px;
+.custom .stick.pressed.right{
+    background-position-x: -211px;
 }
-
-.ps5 .stick.left {
+.custom .stick.left{
     top: 0;
     left: 0;
 }
-
-.ps5 .stick.right {
+.custom .stick.right{
     top: calc(100% - 105px);
     left: calc(100% - 105px);
 }
-
-.ps5 .dpad {
+/* Dpad possitioning and sizing */
+.custom .dpad{
     position: absolute;
-    width: 125px;
-    height: 126px;
-    top: 181px;
-    left: 92px;
+    width: 140px;
+    height: 132px;
+    top: 192px;
+    left: 74px;
 }
-
-.ps5 .face {
-    background: url(ps4-assets/dpad.svg);
+.custom .face{
+    background: url(ps3-assets/dpad.png);
     position: absolute;
 }
-
-.ps5 .face.up, .ds4 .face.down {
-    width: 36px;
+.custom .face.up, .custom .face.down{
+    width: 38px;
     height: 52px;
 }
-
-.ps5 .face.left, .ds4 .face.right {
+.custom .face.left, .custom .face.right{
     width: 52px;
-    height: 36px;
+    height: 38px;
 }
-
-.ps5 .face.up {
-    left: 44px;
+.custom .face.up{
+    left: 50px;
     top: 0;
-    background-position: -37px 0px;
+    background-position: 92px 0px;
 }
-
-.ps5 .face.down {
-    left: 44px;
-    bottom: 0;
+.custom .face.down{
+    left: 50px;
+    top: 79px;
+    background-position: 131px 0;
+}
+.custom .face.left{
+    top: 47px;
+    left: 0;
     background-position: 0px 0;
 }
-
-.ps5 .face.left {
-    top: 45px;
-    left: 0;
-    background-position: 104px 0;
-}
-
-.ps5 .face.right {
-    top: 45px;
+.custom .face.right{
+    top: 47px;
     right: 0px;
-    background-position: 52px 0;
+    background-position: 53px 0;
 }
-
-.ps5 .face.pressed {
-    /* margin-top: 5px; */
+.custom .face.pressed{
+    margin-top: 5px;
     background-position-y: 52px;
 }
-
-.ps5.half {
-    margin-top: -300px;
+/* The following entries are empty because I haven't used them yet, but they
+exist for the purpose of displaying a fightstick. Since fightsticks have 
+the left and right triggers and digital buttons, there are separate 
+html items that allow the triggers to be shown as button presses isntead of
+an opacity setting */
+.custom .trigger-button.left{
+    
 }
-
-/*END DualSense Controller Styling*/
+.custom .trigger-button.right{
+    
+}
+.custom .trigger-button.left.pressed{
+    
+}
+.custom .trigger-button.right.pressed{
+    
+}
+/* This is where the fight stick CSS would go. The ideal way of 
+showing the input would be to use an image sprite of a fight stick in
+all 8 positions, and change it according to the inputs. The classes 
+themselves are fairly self explanatory. */
+.fstick{
+    position: absolute;
+    width: 140px;
+    height: 132px;
+    top: 192px;
+    left: 74px;
+}
+.fstick.up{
+  
+}
+.fstick.down{
+  
+}
+.fstick.left{
+  
+}
+.fstick.right{
+  
+}
+.fstick.up.right{
+  
+}
+.fstick.up.left{
+  
+}
+.fstick.down.right{
+  
+}
+.fstick.down.left{
+  
+}
