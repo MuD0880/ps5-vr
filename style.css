@@ -1,5 +1,5 @@
-/*BEGIN PS4 Controller Styling*/
-.controller.ds4 {
+/*BEGIN DualSense Controller Styling*/
+.controller.ps5 {
     background: url(https://raw.githubusercontent.com/MuD0880/ps5-vr/refs/heads/main/base.svg);
     height: 542px;
     width: 806px;
@@ -8,45 +8,45 @@
 }
 
 /* ps4-assets/disconnected.svg */
-.ds4.disconnected {
+.ps5.disconnected {
     background: url(https://raw.githubusercontent.com/MuD0880/ps5-vr/refs/heads/main/base.svg);
 }
 
-.ds4.disconnected div {
+.ps5.disconnected div {
     display: none;
 }
 
-.ds4 .triggers {
+.ps5 .triggers {
     width: 588px;
     height: 90px;
     position: absolute;
     left: 109px;
 }
 
-.ds4 .trigger {
+.ps5 .trigger {
     width: 99px;
     height: 100%;
     background: url(ps4-assets/triggers.svg);
     opacity: 0;
 }
 
-.ds4 .trigger.left {
+.ps5 .trigger.left {
     float: left;
 }
 
-.ds4 .trigger.right {
+.ps5 .trigger.right {
     float: right;
     background-position-x: 99px;
 }
 
-.ds4 .bumper {
+.ps5 .bumper {
     width: 99px;
     height: 23px;
     background: url(ps4-assets/bumper.svg) no-repeat;
     opacity: 0;
 }
 
-.ds4 .bumpers {
+.ps5 .bumpers {
     position: absolute;
     width: 588px;
     height: 23px;
@@ -54,22 +54,22 @@
     top: 94px;
 }
 
-.ds4 .bumper.pressed {
+.ps5 .bumper.pressed {
     opacity: 1;
 }
 
-.ds4 .bumper.left {
+.ps5 .bumper.left {
     /* -webkit-transform: rotateY(180deg); */
     /* transform: rotateY(180deg); */
     float: left;
 }
 
-.ds4 .bumper.right {
+.ps5 .bumper.right {
     float: right;
     transform: rotateY(180deg);
 }
 
-.ds4 .touchpad {
+.ps5 .touchpad {
     width: 262px;
     height: 151px;
     position: absolute;
@@ -77,11 +77,11 @@
     top: 122px;
 }
 
-.ds4 .touchpad.pressed {
+.ps5 .touchpad.pressed {
     background: url(ps4-assets/touchpad.svg) no-repeat center;
 }
 
-.ds4 .meta {
+.ps5 .meta {
     width: 42px;
     height: 42px;
     position: absolute;
@@ -89,12 +89,12 @@
     bottom: 216px;
 }
 
-.ds4 .meta.pressed {
+.ps5 .meta.pressed {
     background: url(ps4-assets/meta.svg) no-repeat center;
 }
 
 /*Not needed, but I like keeping them here for posterity*/
-/*.ds4 .quadrant{
+/*.ps5 .quadrant{
 position: absolute;
 background: url(ps4-assets/player-n.svg);
 height: 17px;
@@ -102,19 +102,19 @@ width: 111px;
 top: 140px;
 left: 240px;
 }
-.ds4 .p0{
+.ps5 .p0{
 background-position: 0 -6px;
 }
-.ds4 .p1{
+.ps5 .p1{
 background-position: 0 -28px;
 }
-.ds4 .p2{
+.ps5 .p2{
 background-position: 0 -49px;
 }
-.ds4 .p3{
+.ps5 .p3{
 background-position: 0 -70px;
 }*/
-.ds4 .arrows {
+.ps5 .arrows {
     position: absolute;
     width: 352px;
     height: 46px;
@@ -122,31 +122,31 @@ background-position: 0 -70px;
     left: 227px;
 }
 
-.ds4 .back, .ds4 .start {
+.ps5 .back, .ps5 .start {
     background: url(ps4-assets/start.svg);
     width: 28px;
     height: 46px;
     opacity: 0;
 }
 
-.ds4 .back.pressed, .ds4 .start.pressed {
+.ps5 .back.pressed, .ps5 .start.pressed {
     /* background-position-y: -21px; */
     /* margin-top: 2px; */
     opacity: 1;
 }
 
-.ds4 .back {
+.ps5 .back {
     float: left;
     /* width: 28px; */
 }
 
-.ds4 .start {
+.ps5 .start {
     float: right;
     /* width: 28px; */
     background-position: 28px 0;
 }
 
-.ds4 .abxy {
+.ps5 .abxy {
     position: absolute;
     width: 170px;
     height: 171px;
@@ -154,41 +154,41 @@ background-position: 0 -70px;
     left: 567px;
 }
 
-.ds4 .button {
+.ps5 .button {
     position: absolute;
     width: 55px;
     height: 55px;
     background: url(ps4-assets/face.svg);
 }
 
-.ds4 .button.pressed {
+.ps5 .button.pressed {
     background-position-y: 55px;
     /* margin-top: 5px; */
 }
 
-.ds4 .a {
+.ps5 .a {
     background-position: 0 0;
     bottom: 0;
     left: 58px;
 }
 
-.ds4 .b {
+.ps5 .b {
     background-position: -57px 0;
     top: 58px;
     right: 0px;
 }
 
-.ds4 .x {
+.ps5 .x {
     background-position: -113px 0;
     top: 58px;
 }
 
-.ds4 .y {
+.ps5 .y {
     background-position: 55px 0;
     left: 58px;
 }
 
-.ds4 .sticks {
+.ps5 .sticks {
     position: absolute;
     width: 361px;
     height: 105px;
@@ -196,32 +196,32 @@ background-position: 0 -70px;
     left: 228px;
 }
 
-.ds4 .stick {
+.ps5 .stick {
     position: absolute;
     background: url(ps4-assets/sticks.svg);
     height: 94px;
     width: 94px;
 }
 
-.ds4 .stick.pressed.left {
+.ps5 .stick.pressed.left {
     background-position-x: -96px;
 }
 
-.ds4 .stick.pressed.right {
+.ps5 .stick.pressed.right {
     background-position-x: -192px;
 }
 
-.ds4 .stick.left {
+.ps5 .stick.left {
     top: 0;
     left: 0;
 }
 
-.ds4 .stick.right {
+.ps5 .stick.right {
     top: calc(100% - 105px);
     left: calc(100% - 105px);
 }
 
-.ds4 .dpad {
+.ps5 .dpad {
     position: absolute;
     width: 125px;
     height: 126px;
@@ -229,52 +229,52 @@ background-position: 0 -70px;
     left: 92px;
 }
 
-.ds4 .face {
+.ps5 .face {
     background: url(ps4-assets/dpad.svg);
     position: absolute;
 }
 
-.ds4 .face.up, .ds4 .face.down {
+.ps5 .face.up, .ds4 .face.down {
     width: 36px;
     height: 52px;
 }
 
-.ds4 .face.left, .ds4 .face.right {
+.ps5 .face.left, .ds4 .face.right {
     width: 52px;
     height: 36px;
 }
 
-.ds4 .face.up {
+.ps5 .face.up {
     left: 44px;
     top: 0;
     background-position: -37px 0px;
 }
 
-.ds4 .face.down {
+.ps5 .face.down {
     left: 44px;
     bottom: 0;
     background-position: 0px 0;
 }
 
-.ds4 .face.left {
+.ps5 .face.left {
     top: 45px;
     left: 0;
     background-position: 104px 0;
 }
 
-.ds4 .face.right {
+.ps5 .face.right {
     top: 45px;
     right: 0px;
     background-position: 52px 0;
 }
 
-.ds4 .face.pressed {
+.ps5 .face.pressed {
     /* margin-top: 5px; */
     background-position-y: 52px;
 }
 
-.ds4.half {
+.ps5.half {
     margin-top: -300px;
 }
 
-/*END PS4 Controller Styling*/
+/*END DualSense Controller Styling*/
