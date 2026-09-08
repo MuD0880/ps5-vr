@@ -13,7 +13,7 @@
 사용한 그래픽 편집 프로그램 : GIMP 3.2.4
 제작자 : TwinCat   2026년 09월 08일
 제작자 Github ID : MuD0880
-PNG 파일의 저장 위치 : https://raw.githubusercontent.com/MuD0880/ps5-vr/refs/heads/main/
+PNG 파일의 저장 위치 : https://github.com/MuD0880/ps5-vr
 CSS 파일의 저장 위치 : https://gist.githubusercontent.com/MuD0880/fcad6f58e52089323b96c3b3937ae7a8/raw/4f5b199dd21f7ac2ca37988222d3c8a6e84f9a1b/DualSense_Overlay.css
 
 .이 오버레이 스킨은 무료이며 자유배포 가능합니다. 하지만 상업적인 용도에서는 제작자와 상의하여야 합니다. (인터넷방송은 제외)
@@ -34,7 +34,7 @@ CSS 파일의 저장 위치 : https://gist.githubusercontent.com/MuD0880/fcad6f5
 Graphic editing program used: GIMP 3.2.4
 Creator: TwinCat, September 8, 2026
 Creator Github ID: MuD0880
-PNG file path : https://raw.githubusercontent.com/MuD0880/ps5-vr/refs/heads/main/
+PNG file path : https://github.com/MuD0880/ps5-vr
 CSS file path : https://gist.githubusercontent.com/MuD0880/fcad6f58e52089323b96c3b3937ae7a8/raw/4f5b199dd21f7ac2ca37988222d3c8a6e84f9a1b/DualSense_Overlay.css
 
 This overlay skin is free and can be freely distributed. However, for commercial use, you must consult with the producer. (Internet broadcasting is excluded.)
